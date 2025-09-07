@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Deepfake Detection System - SRS</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color: #2c3e50; }
+    h1, h2, h3 { color: #1a237e; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 22px; margin-top: 30px; }
+    h3 { font-size: 18px; margin-top: 20px; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #e3f2fd; }
+    code { background-color: #f9f9f9; padding: 2px 4px; border-radius: 4px; }
+    .section { margin-bottom: 40px; }
+  </style>
+</head>
+<body>
+
+  <h1>Software Requirements Specification (SRS)</h1>
+  <p><strong>Project Title:</strong> Deepfake Detection System using MesoNet<br>
+  <strong>Version:</strong> 1.0<br>
+  <strong>Date:</strong> April 12, 2025<br>
+  <strong>Prepared by:</strong> The DeepFake Detection Team</p>
+
+  <h2>1. Introduction</h2>
+  <h3>1.1 Purpose</h3>
+  <p>This document specifies the requirements for the Deepfake Detection System, which aims to identify manipulated images using MesoNet CNN architecture.</p>
+
+  <h3>1.2 Scope</h3>
+  <p>The system processes uploaded images, analyzes them using a pre-trained MesoNet model, and reports whether the image contains a real face or a deepfake.</p>
+
+  <h3>1.3 Definitions and Acronyms</h3>
+  <ul>
+    <li><strong>Deepfake:</strong> AI-generated synthetic media</li>
+    <li><strong>MesoNet:</strong> CNN architecture for deepfake detection</li>
+    <li><strong>CNN:</strong> Convolutional Neural Network</li>
+    <li><strong>UI:</strong> User Interface</li>
+    <li><strong>API:</strong> Application Programming Interface</li>
+  </ul>
+
+  <h3>1.4 References</h3>
+  <ul>
+    <li>MesoNet: Afchar et al., 2018</li>
+    <li><a href="https://flask.palletsprojects.com/">Flask Documentation</a></li>
+    <li><a href="https://docs.opencv.org/">OpenCV Documentation</a></li>
+  </ul>
+
+  
+
+  <h2>2. Overall Description</h2>
+  <h3>2.1 Product Perspective</h3>
+  <p>A web-based application with an ML back end and user-friendly front end for deepfake classification.</p>
+
+  <h3>2.2 Product Features</h3>
+  <ul>
+    <li>Image upload interface</li>
+    <li>Face detection preprocessing</li>
+    <li>Classification with confidence scores</li>
+    <li>Detection history and educational tools</li>
+  </ul>
+
+  <h3>2.3 User Classes</h3>
+  <ul>
+    <li>General Users</li>
+    <li>Students/Researchers</li>
+    <li>Educators</li>
+  </ul>
+
+  <h3>2.4 Operating Environment</h3>
+  <p>Chrome, Firefox, Safari, Python 3.11+, Flask, Gunicorn, PostgreSQL, TensorFlow/Keras</p>
+
+  <h3>2.5 Design Constraints</h3>
+  <ul>
+    <li>Use MesoNet model</li>
+    <li>Max image processing time: 5 sec</li>
+    <li>Responsive web interface</li>
+  </ul>
+
+  <h3>2.6 Assumptions</h3>
+  <ul>
+    <li>Pre-trained MesoNet available</li>
+    <li>Internet connectivity assumed</li>
+  </ul>
+
+  <h2>3. Specific Requirements</h2>
+
+  <h3>3.1 Functional Requirements</h3>
+  <ul>
+    <li>Image validation (FR1.2), face detection (FR2.1), classification (FR3.1), education (FR4.1)</li>
+  </ul>
+
+  <h3>3.2 Non-Functional Requirements</h3>
+  <ul>
+    <li>Performance: &lt;5 sec processing, 85% accuracy</li>
+    <li>Security: HTTPS, no permanent storage</li>
+    <li>Usability: Responsive, no prior training</li>
+    <li>Reliability: Graceful error handling, 99% uptime</li>
+  </ul>
+
+  <h2>4. External Interface Requirements</h2>
+  <ul>
+    <li>UI Pages: Homepage, Results, About, Quiz, Gallery</li>
+    <li>Software Interfaces: PostgreSQL, OpenCV, TensorFlow</li>
+    <li>Communications: HTTP/HTTPS</li>
+  </ul>
+
+</body>
+</html>
