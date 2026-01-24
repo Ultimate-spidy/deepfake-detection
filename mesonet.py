@@ -1,6 +1,7 @@
 from tensorflow.keras.models import Model
 import numpy as np
 from tensorflow.keras.layers import Input, Conv2D, BatchNormalization, MaxPooling2D, Flatten, Dense
+import os
 
 def Meso4():
     x = Input(shape=(256, 256, 3))
@@ -27,8 +28,11 @@ def Meso4():
     return Model(inputs=x, outputs=y)
 
 def load_model():
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    weights_path = os.path.join(BASE_DIR, "model_weights.h5")
+
     model = Meso4()
-    model.load_weights('model_weights.h5')
+    model.load_weights(weights_path)
     return model
 
 def predict(model, image):
